@@ -1,0 +1,34 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="#" class="header__logo">
+        <img src="images/ico/logo.svg" alt="" />
+      </a>
+      <div class="header__box">
+        <nav class="header-nav">
+          <ul class="header-nav__menu">
+            <li class="header-nav__list">
+              <a href="#" class="header-nav__list-link"> About </a>
+            </li>
+            <li class="header-nav__list">
+              <a href="#" class="header-nav__list-link"> News </a>
+            </li>
+            <li class="header-nav__list">
+              <a href="#" class="header-nav__list-link"> Events </a>
+            </li>
+            <li class="header-nav__list">
+               <a href="#" class="header-nav__list-link"> Partners </a>
+             </li>
+             <li class="header-nav__list">
+               <a href="#" class="header-nav__list-link"> Multimedia </a>
+             </li>
+          </ul>
+        </nav>
+        {% include "@components/social/social.twig" %}
+      </div>
+      <button class="c-header__opener js-header__opener" type="button">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>

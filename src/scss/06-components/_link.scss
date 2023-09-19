@@ -1,0 +1,26 @@
+.link {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  padding-right: 20px;
+  width: fit-content;
+  transition: all 0.3s;
+  text-decoration-color: transparent;
+  &:hover {
+    padding-right: 28px;
+    text-decoration-color: inherit;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/ico/right-arrow.svg");
+    width: 10px;
+    height: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: 3px;
+  }
+}

@@ -1,0 +1,28 @@
+.footer {
+  margin-top: 56px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    border-top: 1px solid var(--color-blue);
+  }
+}
+.cookies {
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  text-decoration-color: transparent;
+  margin-bottom: 32px;
+  &:hover {
+    text-decoration-color: inherit;
+  }
+}
+.copyright {
+  margin-bottom: 32px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}

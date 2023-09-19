@@ -1,0 +1,29 @@
+.hp-partners {
+  margin-bottom: 54px;
+  @include media-breakpoint-down(md) {
+   margin-bottom: 40px;
+ }
+  .partners__item {
+    border-radius: 10px;
+    border: 1px solid rgba(151, 151, 151, 1);
+    padding: 20px;
+    aspect-ratio: 320/200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+  }
+  .slick-slide {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .slick-track {
+    margin-left: -10px;
+  }
+}
