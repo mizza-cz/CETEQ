@@ -9,10 +9,8 @@
     aspect-ratio: 1041/400;
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 56px;
     position: relative;
     @include media-breakpoint-down(lg) {
-      margin-top: 0;
       aspect-ratio: 1041/540;
     }
     img {
