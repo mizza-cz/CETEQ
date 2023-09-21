@@ -1,9 +1,11 @@
-{% extends "@components/base/base.twig" %} {% set title = "02.0_static" %} {%
-block main %}
-
-<section class="static-section pt-6 mb-10 pb-6">
+<section class="article-section mb-10 pb-6">
   <div class="container">
     <div class="row">
+      <div class="col-xl-8 col-md-10 m-auto">
+        <div class="article-section__img">
+          <img src="images/content/post.jpeg" loading="lazy" alt="" />
+        </div>
+      </div>
       <div class="col-xl-7 col-md-9 m-auto">
         <div class="header-page">
           <h1 class="h2">
@@ -12,7 +14,12 @@ block main %}
           <div class="header-page__date">26/8 2023</div>
         </div>
         <div class="o-content">
-      
+          <div class="perex">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac
+            dolor sit amet purus malesuada congue. Nulla accumsan, elit sit amet
+            varius semper, nulla mauris mollis quam, tempor suscipit diam nulla
+            vel leo. Duis risus. In enim a arcu imperdiet malesuada.
+          </div>
           <p>
             Nulla accumsan, elit sit amet varius semper, nulla mauris mollis
             quam, tempor suscipit diam nulla vel leo. Fusce nibh. Etiam bibendum
@@ -108,6 +115,3 @@ block main %}
     </div>
   </div>
 </section>
-
-{% include "@components/hp-partners/hp-partners.twig" %} {% include
-"@components/hp-instagram/hp-instagram.twig" %} {% endblock %}
