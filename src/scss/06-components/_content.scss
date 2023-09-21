@@ -1,11 +1,96 @@
 .o-content {
+  td,
+  th {
+    width: auto;
+    text-align: left;
+    vertical-align: middle;
+    img {
+      margin: 0;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    margin: 32px auto;
+  }
+  ol {
+    counter-reset: item;
+    margin-top: 12px;
+    margin-bottom: 40px;
+    > li {
+      counter-increment: item;
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 16px;
+      &::before {
+        content: counter(item) ")";
+        color: var(--color-dark);
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      > ol {
+        margin: 16px 0 0;
+        > li {
+          &::before {
+            content: counter(item) ".";
+          }
+        }
+      }
+    }
+  }
+  ul {
+    margin-top: 12px;
+    margin-bottom: 40px !important;
+    li {
+      position: relative;
+      padding-left: 24px;
+      display: block;
+      font-size: 14px;
+      line-height: 1.57;
+      margin-bottom: 10px;
+      a {
+        text-decoration-color: transparent;
+        transition: all 0.3s;
+
+        &:hover {
+          text-decoration-color: inherit;
+        }
+      }
+      &::before {
+        content: "";
+        background-color: var(--color-primary);
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+    }
+  }
+  iframe {
+    margin: 32px auto;
+    display: block;
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
   h1 {
     margin-bottom: 32px;
     @include media-breakpoint-down(lg) {
       margin-bottom: 24px;
     }
   }
-  p{
+  p {
     margin-bottom: 16px;
     font-size: 16px;
     line-height: 24px;
@@ -33,6 +118,18 @@
     line-height: normal;
   }
 }
+.o-content h2,
+.h2 {
+  color: rgba(0, 0, 49, 1);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  @include media-breakpoint-down(lg) {
+    font-size: 28px;
+    line-height: normal;
+  }
+}
+
 .o-content h3,
 .h3 {
   font-size: 24px;
@@ -42,10 +139,28 @@
     font-size: 20px;
   }
 }
+.o-content h4,
+.h4 {
+  font-size: 20px;
+  font-weight: 700;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 18px;
+  }
+}
 
 .o-content h6,
 .h6 {
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
+}
+
+.header-page {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-primary);
+  margin-bottom: 32px;
+  .h2 {
+    max-width: 700px;
+  }
 }
