@@ -1,4 +1,4 @@
-$("#animated-thumbnail").lightGallery({
+$("#animated-thumbnail, .animated-thumbnail").lightGallery({
   thumbnail: true,
   getCaptionFromTitleOrAlt: true,
   selector: "a[style]",
