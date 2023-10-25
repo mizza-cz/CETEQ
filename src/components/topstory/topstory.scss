@@ -1,7 +1,7 @@
 .topstory {
   margin-bottom: 54px;
-  @include media-breakpoint-down(md) {
-    margin-bottom: 40px;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 20px;
   }
   &__date {
     color: var(--color-light);
@@ -10,6 +10,9 @@
     text-align: right;
     padding-left: 16px;
     width: 56px;
+    @include media-breakpoint-down(lg) {
+      font-size: 14px !important;
+    }
   }
   &__info {
     position: absolute;
@@ -54,9 +57,61 @@
       }
     }
   }
-  &__item--first {
+  &__col.active {
+    width: 50%;
+    aspect-ratio: 680/425;
     .topstory__date {
       font-size: 18px;
+      line-height: 130%;
+    }
+    .topstory__info-title {
+      .h3 {
+        font-size: 24px;
+        margin-bottom: 16px;
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 8px;
+        }
+      }
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  &__col {
+    width: 25%;
+    padding: 0 20px;
+    transition: all 0.4s;
+    aspect-ratio: 320/425;
+    height: 100%;
+    @include media-breakpoint-only(lg) {
+      width: 50%;
+    }
+    @include media-breakpoint-down(xl) {
+      aspect-ratio: 680/425;
+      padding: 0 12px;
+    }
+    @include media-breakpoint-down(lg) {
+      width: 100% !important;
+      margin-bottom: 24px;
+    }
+    &:first-child {
+      @include media-breakpoint-down(xl) {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-left: -20px;
+    margin-right: -20px;
+    aspect-ratio: 1255/455;
+    @include media-breakpoint-down(xl) {
+      flex-wrap: wrap;
+      aspect-ratio: auto;
+      margin-left: -12px;
+      margin-right: -12px;
     }
   }
   &__item {
@@ -66,7 +121,7 @@
     border-radius: 10px;
     overflow: hidden;
     height: 100%;
-    aspect-ratio: 680/425;
+
     z-index: 5;
     &:hover {
       .topstory__info-title span {
@@ -97,18 +152,15 @@
       object-fit: cover;
       transition: all 0.3s;
     }
-    .h6 {
-      color: var(--color-light);
-      margin-bottom: 8px;
-      @include media-breakpoint-down(lg) {
-        font-size: 20px;
-      }
-    }
     .h3 {
       color: var(--color-light);
-      margin-bottom: 16px;
+      margin-bottom: 8px;
+      font-size: 16px;
+      transition: font-size 0.5s;
+
       @include media-breakpoint-down(lg) {
-        margin-bottom: 8px;
+        font-size: 16px !important;
+        margin-bottom: 8px !important;
       }
     }
   }
