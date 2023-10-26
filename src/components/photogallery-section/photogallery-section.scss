@@ -9,3 +9,25 @@
     }
   }
 }
+.btn {
+  color: var(--color-light);
+  background-color: var(--color-primary);
+  display: block;
+  width: fit-content;
+  padding: 8px 24px;
+  font-weight: 600;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.1);
+    color: var(--color-light);
+    background-color: var(--color-primary);
+  }
+}
+
+.btn-more {
+  margin: 0 auto;
+  margin-top: 40px;
+}
