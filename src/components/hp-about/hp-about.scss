@@ -11,7 +11,7 @@
     overflow: hidden;
     position: relative;
     @include media-breakpoint-down(lg) {
-      aspect-ratio: 1041/540;
+      aspect-ratio: 1041/840;
     }
     img {
       width: 100%;
@@ -35,6 +35,14 @@
   position: relative;
   z-index: 2;
   margin-right: 40px;
+  margin-left: 40px;
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+    align-items: start;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 16px;
+  }
   li {
     display: flex;
     align-items: center;
@@ -45,10 +53,15 @@
     font-weight: 400;
     line-height: 15px;
     text-transform: uppercase;
-    max-width: 256px;
+    max-width: auto;
   }
   li + li {
     border-left: 1px solid var(--color-primary);
+    @include media-breakpoint-down(md) {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-left: none;
+    }
   }
   span {
     font-size: 24px;
