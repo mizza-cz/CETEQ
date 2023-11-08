@@ -5,8 +5,14 @@
 .container {
   max-width: 93.333333rem !important;
 }
-.g-10 {
-  --bs-gutter-x: 2.5rem;
-  --bs-gutter-y: 2.5rem;
+.g-xl-10 {
+  @include media-breakpoint-up(xl) {
+    --bs-gutter-x: 2.5rem;
+    --bs-gutter-y: 2.5rem;
+  }
+}
+.g-5 {
+  --bs-gutter-x: 1.25rem;
+  --bs-gutter-y: 1.25rem;
 }
 /*! purgecss end ignore */

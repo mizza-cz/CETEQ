@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var a = false;
-  $(".topstory__item").click(function () {
+  $(".photogallery-section__item").click(function () {
     if (!a) {
       a = true;
       var galleryId = $(this).data("gallery-id");
