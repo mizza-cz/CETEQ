@@ -13,7 +13,7 @@ $(document).ready(function () {
             share: false,
             dynamic: true,
             dynamicEl: a,
-            index: null,
+            index: 0,
             download: false,
             backdropDuration: 500,
           });
